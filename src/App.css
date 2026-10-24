@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: #f1f5f9;
+  color: #1f2937;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+.panel {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  margin: 0 0 1.2rem;
+  text-align: center;
+  color: #9a3412;
+}
+
+input {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  font-size: 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #fb923c;
+  box-shadow: 0 0 0 3px rgba(251, 146, 60, 0.25);
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.grid {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.recipe-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  background: #fafafa;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  text-align: left;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.recipe-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-card img,
+.detail img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.recipe-card img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background: #e5e7eb;
+  /* grey box shown until the image loads */
+}
+
+.detail {
+  margin-top: 1.5rem;
+}
+
+.detail img {
+  max-width: 300px;
+}
+
+.back {
+  padding: 0.5rem 0.9rem;
+  margin-bottom: 1rem;
+  background: #f1f5f9;
+  border: none;
+  border-radius: 8px;
+}
+
+.muted {
+  color: #64748b;
+}
+
+.instructions {
+  white-space: pre-line;
+  line-height: 1.6;
+}
+
+.error {
+  padding: 0.7rem;
+  background: #fee2e2;
+  color: #b91c1c;
+  border-radius: 10px;
+  text-align: center;
+}
